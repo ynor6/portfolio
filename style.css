@@ -1,0 +1,10 @@
+@import url("pages/landing.css");
+@import url("projects/landing.css");
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}

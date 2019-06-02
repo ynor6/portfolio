@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+    <head>
+        <title>L14 - Loading and displaying 3D models</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800&display=swap" rel="stylesheet">
+        <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-gltf-part-component/dist/aframe-gltf-part-component.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div id="side">
+                <!-- navbar -->
+                <div class="container-1">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">PROJECTS</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </div>
+                <div class="container-header">
+                    <span class="hello">Hello!</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.</p>
+            </div>
+            <div id="my-scene">
+                <a-scene embedded> 
+                    <!-- Asset Management System -->
+                    <!-- Download and move your 3D models to the ASSETs folder -->
+                    <a-assets>
+                        <img id="sky" src="L14-ASSETs/yellow.jpg">
+                        <a-asset-item id="your-3Dmodel-01" src="L14-ASSETs/Rony_Chatuli.gltf"></a-asset-item>
+                        <a-asset-item id="cloud1" src="L14-ASSETs/cloud1.gltf"></a-asset-item>
+                        <a-asset-item id="cloud2" src="L14-ASSETs/cloud2.gltf"></a-asset-item>
+                        <a-asset-item id="cloud3" src="L14-ASSETs/cloud3.gltf"></a-asset-item>
+                        <img id="elder" src="L14-ASSETs/elder.jpg">
+                    </a-assets>
+                    
+                        <!-- Sky -->
+                        <a-sky src="#sky"></a-sky>
+                        
+                        <!-- Camera -->
+                        <a-entity id="camera" position="14 6 13" rotation="-4 25 0">
+                            <a-camera></a-camera>
+                        </a-entity>
+                        
+                        <a-entity position="0 1.8 -1" text="value: Hi there!" ></a-entity>
+
+                        <!-- Your 3D Model 01 -->
+                        <a-entity gltf-model="#your-3Dmodel-01"></a-entity>
+                        <!-- <a-entity gltf-part="src: #your-3Dmodel-01; part: stones"></a-entity>  -->
+
+                        <!-- cloud1 -->
+                        <a-entity gltf-model="#cloud1">
+                            <a-animation attribute="position"
+                                            from="30 0 0"
+                                            to="-50 0 0"
+                                            repeat="indefinite"
+                                            dur="10000"
+                                            easing="linear">
+                            </a-animation>
+                        </a-entity>
+                            <!-- cloud2 -->
+                        <a-entity gltf-model="#cloud2">
+                            <a-animation attribute="position"
+                                            from="30 0 0"
+                                            to="-120 0 0"
+                                            repeat="indefinite"
+                                            dur="13000"
+                                            easing="linear">
+                            </a-animation>
+                        </a-entity>
+                </a-scene> 
+            </div>
+        </div>
+        
+        <div class="container-2">
+            <div class="my-work">
+                <h1>Hello</h1>
+            </div>
+            <p>Places of worship can be abandoned for many different reasons.
+                "It can range from anything from a change of faith and conquest, running out of money, and, of course, earthquakes and natural disasters," says Joffe. "I was struck by how many churches were submerged in water, for instance."
+                One of the most extraordinary photographs in Joffe's book shows a 14th century Romanesque church spire peeking out from the watery depths of the Reschensee lake in South Tyrol, Italy.
+                It's an otherworldly, ethereal image that belies a darker truth.
+                "It looks like a fairy tale to us. But of course, for the people who there they were given short notice to leave the village and their beloved church," says Joffe.</p>
+        </div>
+    </div>   
+    </body>
+</html>

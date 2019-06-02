@@ -1,0 +1,99 @@
+
+#side{
+    width: 35%;
+    background-color: rgb(57 67 71);
+    height: 100vh;
+    padding-top: 30px;
+}
+
+#my-scene{
+    width: 65%;
+    height: 100vh;
+    z-index: 100;
+}
+
+.container-1{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+li a {
+    text-decoration: none;
+    color: rgb(249 223 70);
+    padding: 12px 30px;
+    font-weight: 800;
+    letter-spacing: 1px;
+} 
+
+.container-1 a::after{
+    content:'';
+    display: block;
+    width:0;
+    height: 4px;
+    background: rgb(249 223 70);
+    transition: width .3s;
+}
+
+.container-1  a:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+#side p{
+    color: white;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 50px;
+    line-height: 1.6;
+    animation: text2 4s ;
+}
+
+#side span{
+    text-align: center;
+}
+
+.container{
+    display: flex;
+}
+
+.container-header{
+    text-align: center;
+}
+
+.a-enter-vr-button{
+    display: none;
+}
+
+.hello{
+    text-align: center;
+    font-size: 150px;;
+    color:white;
+    margin-top: 25px;
+    margin-bottom: 0;
+    position: relative;
+    animation: text1 2s;
+    letter-spacing: -6px;
+}
+
+@keyframes text1 {
+    0%{
+        color: rgb(57 67 71);
+        margin-bottom: -40px;
+    }
+    30%{
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }
+    85%{
+        letter-spacing: -6px;
+        margin-bottom: -40px;
+    }
+}
+
+@keyframes text2 {
+    0%{
+        color: rgb(57 67 71);
+    }
+}
