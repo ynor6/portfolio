@@ -8,20 +8,20 @@
         <script src="https://unpkg.com/aframe-gltf-part-component/dist/aframe-gltf-part-component.min.js"></script>
         <script src="index.js"></script>
     </head>
-    <body>
+    <body onload="initPage();">
         <div class="container">
             <div id="side">
                 <!-- navbar -->
                 <div class="container-1">
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">PROJECTS</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a class = "yellow" href="#">HOME</a></li>
+                    <li><a class = "yellow" href="#">PROJECTS</a></li>
+                    <li><a class = "yellow" href="#">CONTACT</a></li>
                 </div>
                 <div class="container-header">
                     <h1 class="hello">Hello</h1>
                 </div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.</p>
+                    Ut enim ad minim veniam, aliquip ex ea commodo consequa.</p>
             </div>
             <div id="my-scene">
                 <a-scene embedded> 
@@ -40,7 +40,7 @@
                         <a-sky src="#sky"></a-sky>
                         
                         <!-- Camera -->
-                        <a-entity id="camera" position="12 7 12" rotation="-4 40 0">
+                        <a-entity id="camera" position="12 6 13" rotation="-4 40 0">
                             <a-camera></a-camera>
                         </a-entity>
                         
@@ -75,14 +75,17 @@
         </div>
         
         <div class="container-2">
-            <div class="my-work">
-                <h1>Hello</h1>
+            <div class="side-1">
+                <div class="title">
+                    <h1>MY<BR>WORK</h1>
+                </div>
             </div>
-            <p>Places of worship can be abandoned for many different reasons.
-                "It can range from anything from a change of faith and conquest, running out of money, and, of course, earthquakes and natural disasters," says Joffe. "I was struck by how many churches were submerged in water, for instance."
-                One of the most extraordinary photographs in Joffe's book shows a 14th century Romanesque church spire peeking out from the watery depths of the Reschensee lake in South Tyrol, Italy.
-                It's an otherworldly, ethereal image that belies a darker truth.
-                "It looks like a fairy tale to us. But of course, for the people who there they were given short notice to leave the village and their beloved church," says Joffe.</p>
+            <div class="side-2">
+            <div class="text">
+                <p>Places of worship can be abandoned for many different reasons.
+                    "Itge of faith and conquest, running out of money, and, of course, earthquakes and natural disasters," says Joffe. "I was struck by how many churches were submerged in water, for instance."
+                    One of the most extraordinary photographs in Joffe's book shows a 14th century Romanesque church spige and their beloved church," says Joffe.</p>
+            </div>
         </div>
     </div>   
     </body>

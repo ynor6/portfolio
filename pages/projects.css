@@ -1,3 +1,38 @@
-.my-work{
-    background-color: rgb(249 223 70);
+.side-1{
+    background-color: rgb(217 91 68);
+    display: flex;
+    height: 50%;
+    border-bottom: 20px solid rgb(255 216 87);
+}
+
+.container-2{
+    height: 100vh;
+}
+
+.side-1 h1{
+    color:rgb(255 216 87);
+    font-size: 110px;
+    line-height: 100px;
+}
+
+.title{
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.text{
+    width: 35%;
+    font-size: 16px; 
+    padding-top: 50px;
+    line-height: 129.4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text p {
+    width: 80%;
 }

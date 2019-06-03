@@ -2,7 +2,7 @@
 #side{
     width: 35%;
     background-color: rgb(57 67 71);
-    padding-top: 30px;
+    padding-top: 14px;
 }
 
 #my-scene{
@@ -14,28 +14,50 @@
 .container-1{
     list-style: none;
     width: 35%;
+    height: 40px;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     position: fixed;
+    background-color: rgb(59 67 70);
+    z-index: 1; 
+    padding-top: 25px;
+    transition: 0.2s background-color ease;
+}
 
+.container-1 li{
+    padding-top:10px;
+    text-align: center;
+    padding: 0 25px;
 }
 
 li a {
     text-decoration: none;
     color: rgb(249 223 70);
-    padding: 12px 30px;
     font-weight: 800;
     letter-spacing: 1px;
 } 
 
-.container-1 a::after{
+.new-class{
+    background-color: transparent;
+}
+
+.container-1 a.yellow::after{
     content:'';
     display: block;
     width:0;
     height: 4px;
     background: rgb(249 223 70);
+    transition: width .3s;
+}
+
+.container-1 a.blue::after{
+    content:'';
+    display: block;
+    width:0;
+    height: 4px;
+    background: rgb(59 67 70);
     transition: width .3s;
 }
 
@@ -73,7 +95,7 @@ li a {
     font-size: 130px;;
     font-family: 'Montserrat', sans-serif;
     color:white;
-    margin-top: 25px;
+    margin-top: 60px;
     position: relative;
     animation: text1 2s;
     letter-spacing: 5px;
