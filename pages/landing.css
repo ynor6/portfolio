@@ -1,25 +1,21 @@
 
 #side{
-    width: 35%;
+    width: 40%;
     background-color: rgb(57 67 71);
     padding-top: 14px;
 }
 
 #my-scene{
-    width: 65%;
+    width: 60%;
     height: 100vh;
     z-index: 100;
 }
 
 .container-1{
     list-style: none;
-    width: 35%;
-    height: 40px;
-    margin: 0;
-    padding: 0;
     display: flex;
-    justify-content: center;
     position: fixed;
+    margin-left: 6%;
     background-color: rgb(59 67 70);
     z-index: 1; 
     padding-top: 25px;
@@ -29,7 +25,7 @@
 .container-1 li{
     padding-top:10px;
     text-align: center;
-    padding: 0 25px;
+    /* padding-right: 30px;  */
 }
 
 li a {
@@ -37,6 +33,8 @@ li a {
     color: rgb(249 223 70);
     font-weight: 800;
     letter-spacing: 1px;
+    margin-right: 25px;
+    margin-bottom: 25px;
 } 
 
 .new-class{
@@ -69,7 +67,8 @@ li a {
     color: white;
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
-    padding: 0 50px;
+    margin-left: 12%;
+    max-width: 65%;
     line-height: 1.6;
     animation: text2 4s ;
 }
@@ -82,8 +81,9 @@ li a {
     display: flex;
 }
 
-.container-header{
-    text-align: center;
+.title{
+    display: flex;
+
 }
 
 .a-enter-vr-button{
@@ -91,12 +91,11 @@ li a {
 }
 
 .hello{
-    text-align: center;
-    font-size: 130px;;
+    margin-left: 12%;
+    font-size: 120px;
     font-family: 'Montserrat', sans-serif;
     color:white;
-    margin-top: 60px;
-    position: relative;
+    margin-top: 12%;
     animation: text1 2s;
     letter-spacing: 5px;
     height: 100%;
@@ -119,3 +118,22 @@ li a {
         color: rgb(57 67 71);
     }
 }
+
+.white-icons {
+    width: 100%;
+    height: 100%;
+}
+
+.icons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 15px;
+    margin-left: 10%;
+    transform: scale(0.8, 0.8);
+}
+
+.project-img{
+    display: flex;
+}
+

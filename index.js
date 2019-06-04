@@ -30,6 +30,12 @@ const initScrolling = () => {
         }
     }, false);
 }
+
+const change = () => {
+    const image = document.getElementById('change-img');
+    image.src = "L14-ASSETs/cards/finals.png";
+}
+
 const initPage = () => {
     initUpdateNavbarOnScroll();
     initScrolling();
