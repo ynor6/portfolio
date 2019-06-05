@@ -1,80 +1,8 @@
-/*.side-1{
-    background-color: rgb(217 91 68);
-    display: flex;
-    height: 50%;
-    border-bottom: 14px solid rgb(255 216 87);
-}
 
-.container-2{
-    height: 100vh;
-    
-}
-
-.container-3 {
-    position: relative;
-}
-
-.container-4{
-    position: relative;
+.top{
     height: 50vh;
+    background-color: rgb(217 91 68);
 }
-
-.side-1 h1{
-    color:rgb(255 216 87);
-    font-size: 110px;
-    line-height: 100px;
-}
-
-.side-2 {
-    position: relative;
-    height: 50%;
-    float: right;
-}
-
-.title{
-    width: 35%;
-    display: flex;
-    align-items: center;
-    margin-left: 6%;
-    float: left;
-}
-
-.text{
-    margin-left: 6%;
-    float: left;
-    width: 35%;
-    font-size: 16px; 
-    padding-top: 50px;
-    line-height: 129.4%;
-    display: flex;
-    align-items: center;
-}
-
-.text p {
-    width: 80%;
-}
-
-.image{
-    display: flex;
-    align-items: center;
-}
-.image img{
-    width: 50%;
-    position: absolute;
-    box-shadow: 11px 11px 7px -5px rgba(0,0,0,0.12);
-    border-top: 14px solid rgb(255 216 87);
-}
-
-.arrow-btn{
-    z-index: 20;
-    position: absolute;
-    right: 0;
-    margin: 10px 15px;
-}
-
-.project-name p{
-    position: absolute;
-}*/
 
 .top-half{
     border-bottom: 14px solid rgb(255 216 87);
@@ -95,7 +23,6 @@
     display: flex;
     align-content: center;
     height: 50vh;
-    background-color: rgb(217 91 68);
     color:rgb(255 216 87);
     border-bottom: 14px solid rgb(255 216 87);
 }
@@ -111,14 +38,14 @@
 .project-info{
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    margin-left: 10%;
 }
 
 .project-info p{
-    width: 80%;
+    width: 70%;
     font-size: 16px; 
-    padding-top: 50px;
+    padding-top: 40px;
     line-height: 150%;
 }
 
@@ -130,7 +57,6 @@
 .project-title-2{
     width: 60%;
     height: 50vh;
-    background-color: rgb(217 91 68);
     float: right;
     position: absolute;
     top:0;
@@ -138,7 +64,7 @@
     border-bottom: 14px solid rgb(255 216 87);
 }
 
-.image{
+.image-sec{
     position: absolute;
     height: 100%;
     display: flex;
@@ -147,11 +73,53 @@
     margin-left: 25px;   
 }
 
-.image img{
+.image-sec img{
     width:85%;
 
 }
 
 .sides{
     display: flex;
+}
+
+.arrow-btn-container{
+    position: relative;
+    height: 50vh;
+}
+
+.arrow-btn{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 15px;
+    padding-bottom: 12px; 
+}
+
+.img-des{
+    display: flex;
+    margin-top: 15px;
+}
+
+.project-name{
+    color: rgb(217 91 68);
+    font-weight: 800;
+    margin-right: 30px;
+}
+
+.made-with{
+    color: rgb(59 67 70);
+    font-weight: 800; 
+}
+
+.icon{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    margin-left: 25%;
+}
+
+.icon img{
+    position: absolute;
+    width: 22%;
+    margin-top: 3.5%;
 }

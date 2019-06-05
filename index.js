@@ -34,6 +34,7 @@ const initScrolling = () => {
 const change = () => {
     const image = document.getElementById('change-img');
     image.src = "L14-ASSETs/cards/finals.png";
+    console.log(image);
 }
 
 const initPage = () => {
