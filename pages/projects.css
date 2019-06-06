@@ -2,6 +2,7 @@
 .top{
     height: 50vh;
     background-color: rgb(217 91 68);
+    border-bottom: 14px solid rgb(255 216 87);
 }
 
 .top-half{
@@ -24,7 +25,6 @@
     align-content: center;
     height: 50vh;
     color:rgb(255 216 87);
-    border-bottom: 14px solid rgb(255 216 87);
 }
 
 .project-title h1{
@@ -49,11 +49,6 @@
     line-height: 150%;
 }
 
-.project-img{
-    width: 60%;
-    height: 100vh;
-}
-
 .project-title-2{
     width: 60%;
     height: 50vh;
@@ -64,62 +59,64 @@
     border-bottom: 14px solid rgb(255 216 87);
 }
 
-.image-sec{
-    position: absolute;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-left: 25px;   
-}
-
-.image-sec img{
-    width:85%;
-
-}
-
 .sides{
     display: flex;
 }
 
-.arrow-btn-container{
+.image-side{
+    width: 60%;
+    height: 100vh;
     position: relative;
-    height: 50vh;
 }
 
-.arrow-btn{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    margin-right: 15px;
-    padding-bottom: 12px; 
+.top-1{
+    height: 20%;
+    width: 100%;
 }
 
-.img-des{
+.middle{
+    height: 60%;
+    width:100%;
+    position: relative;
+}
+
+.bottom{
+    height: 20%;
+    width: 100%;
+}
+
+.image-preview {
+    background: #000;
+    background: -moz-linear-gradient(-45deg, #000000 0%, #000000 25%, #1e539e 50%, #ff3083 75%, #7800a8 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #000000 0%, #000000 25%, #1e539e 50%, #ff3083 75%, #7800a8 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #000000 0%, #000000 25%, #1e539e 50%, #ff3083 75%, #7800a8 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background-size: 400% 400%;
+    background-repeat: no-repeat;
     display: flex;
-    margin-top: 15px;
-}
-
-.project-name{
-    color: rgb(217 91 68);
-    font-weight: 800;
-    margin-right: 30px;
-}
-
-.made-with{
-    color: rgb(59 67 70);
-    font-weight: 800; 
-}
-
-.icon{
-    height: 50vh;
-    display: flex;
+    width: 80%;
+    height: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
     justify-content: center;
-    margin-left: 25%;
-}
-
-.icon img{
+    align-items: center;
+    color: #fff;
     position: absolute;
-    width: 22%;
-    margin-top: 3.5%;
-}
+    cursor: pointer;
+    transition: .5s all;
+  }
+
+  .image-preview__img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000 url(/L14-ASSETs/cards/elder.png) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: .5;
+    mix-blend-mode: screen;
+  }
