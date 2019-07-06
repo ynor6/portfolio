@@ -1,14 +1,8 @@
 
-#side{
-    width: 40%;
-    background-color: rgb(57 67 71);
-    padding-top: 14px;
-}
-
 #my-scene{
-    width: 60%;
+    width: 100%;
     height: 100vh;
-    z-index: 100;
+    /* z-index: 100; */
 }
 
 .container-1{
@@ -16,21 +10,20 @@
     display: flex;
     position: fixed;
     margin-left: 6%;
-    background-color: rgb(59 67 70);
     z-index: 1; 
-    padding-top: 25px;
     transition: 0.2s background-color ease;
+    width: 100%;
+    margin-top: 25px;
 }
 
 .container-1 li{
-    padding-top:10px;
     text-align: center;
     /* padding-right: 30px;  */
 }
 
 li a {
     text-decoration: none;
-    color: rgb(249 223 70);
+    color: #364346;
     font-weight: 800;
     letter-spacing: 1px;
     margin-right: 25px;
@@ -46,7 +39,7 @@ li a {
     display: block;
     width:0;
     height: 4px;
-    background: rgb(249 223 70);
+    background:  #364346;
     transition: width .3s;
 }
 
@@ -55,7 +48,7 @@ li a {
     display: block;
     width:0;
     height: 4px;
-    background: rgb(59 67 70);
+    background: #364346;;
     transition: width .3s;
 }
 
@@ -63,77 +56,17 @@ li a {
     width: 100%;
     transition: width .3s;
 }
-#side p{
-    color: white;
-    font-size: 18px;
-    font-family: 'Montserrat', sans-serif;
-    margin-left: 12%;
-    max-width: 65%;
-    line-height: 1.6;
-    animation: text2 4s ;
-}
 
-#side span{
-    text-align: center;
-}
-
-.container{
+.navbar{
     display: flex;
+    position: relative;
 }
 
-.title{
-    display: flex;
-
-}
-
-.a-enter-vr-button{
+.contact p {
+    color: #364346;
+    font-weight: 800;
+    margin-left: 25px;
     display: none;
 }
 
-.hello{
-    margin-left: 12%;
-    font-size: 120px;
-    font-family: 'Montserrat', sans-serif;
-    color:white;
-    margin-top: 12%;
-    animation: text1 2s;
-    letter-spacing: 5px;
-    height: 100%;
-}
-
-@keyframes text1 {
-    0%{
-        color: rgb(57 67 71);
-    }
-    30%{
-        letter-spacing: 25px;
-    }
-    85%{
-        letter-spacing: 5px;
-    }
-}
-
-@keyframes text2 {
-    0%{
-        color: rgb(57 67 71);
-    }
-}
-
-.white-icons {
-    width: 100%;
-    height: 100%;
-}
-
-.icons {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding-bottom: 15px;
-    margin-left: 10%;
-    transform: scale(0.8, 0.8);
-}
-
-.project-img{
-    display: flex;
-}
 

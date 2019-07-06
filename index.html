@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+    <head>
+        <title>L14 - Loading and displaying 3D models</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800&display=swap" rel="stylesheet">
+        <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+        <!-- A-FRAME event listener -->
+        <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+        <!-- A-FRAME partial gltf loading -->
+        <script src="https://unpkg.com/aframe-gltf-part-component/dist/aframe-gltf-part-component.min.js"></script>
+        <!-- A-FRAME template -->
+        <script src="https://unpkg.com/aframe-template-component@3.2.1/dist/aframe-template-component.min.js"></script>
+
+        <script src="index.js"></script>
+    </head>
+    <body onload="initPage();">
+        <div class="container">
+            <div id="side">
+                <!-- navbar -->
+                <div class="container-1">
+                    <li><a class = "yellow" href="#" onclick="cameraLocation({x: 11, y:6, z:13}, {x: 1.8, y: 40, z: 0});">HOME</a></li>
+                    <li><a class = "yellow projects" href="#" onclick="cameraLocation({x: 11, y:6, z:13}, {x: -6.18, y: 180, z: 0});">PROJECTS</a></li>
+                    <li><a class = "yellow" href="#" onclick="cameraLocation({x: 11, y:6, z:13}, {x: 0, y: 300, z: 0});">ABOUT</a></li>
+                    <li><a class = "yellow" href="#" onclick="showContact();" >CONTACT</a></li>
+                    <div class="contact">
+                        <p class="contacts">ronyh8@gmail.com / 0543003676</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--  A - Frame -->
+            
+            <div id="my-scene">
+                <a-scene raycaster-autorefresh renderer="gammaOutput: true" embedded> 
+                    <!-- Asset Management System -->
+                    <!-- Download and move your 3D models to the ASSETs folder -->
+                    
+                    <a-assets>
+                        <img id="yellow" src="assets/yellow.jpg">
+                        <img id="pink" src="assets/all.jpg">
+                        <a-asset-item id="your-3Dmodel-01" src="assets/Rony_Chatuli.gltf"></a-asset-item>
+                        <a-asset-item id="cloud1" src="assets/cloud1.gltf"></a-asset-item>
+                        <a-asset-item id="cloud2" src="assets/cloud2.gltf"></a-asset-item>
+                        <a-asset-item id="cloud3" src="assets/cloud3.gltf"></a-asset-item>
+                        <a-asset-item id="info-cube" src="assets/cube.gltf"></a-asset-item>
+                        <a-asset-item id="billboard" src="assets/billboard.gltf"></a-asset-item>
+                        <a-asset-item id="elders-cube" src="assets/cubes/elder.gltf"></a-asset-item>
+                        <a-asset-item id="recipes-cube" src="assets/cubes/recipe_index.gltf"></a-asset-item>
+                        <a-asset-item id="books-cube" src="assets/cubes/book_trailers.gltf"></a-asset-item>
+                        <a-asset-item id="magical-cube" src="assets/cubes/magical_creatures.gltf"></a-asset-item>
+                        <a-asset-item id="luka-cube" src="assets/cubes/luka.gltf"></a-asset-item>
+                    </a-assets>
+                    
+                        <!-- Sky -->
+                        <a-sky id="background" src="#yellow"></a-sky>
+
+                        <!-- Camera -->
+                        
+                        <a-entity id="cameraRig"  wasd-controls look-controls position="11 6 13" rotation="1.8 40 0">
+                            <a-animation attribute="rotation" 
+                                dur="1050" 
+                                easing="linear"
+                                id="cameraRotationAnimation"
+                                to="0 0 0"
+                                from="0 0 0"
+                                begin="navimove"
+                            > 
+                            </a-animation>
+                            <a-animation attribute="position" 
+                                dur="1050" 
+                                easing="linear"
+                                id="cameraPositionAnimation"
+                                to="0 0 0"
+                                from="0 0 0"
+                                begin="navimove"
+                                > 
+                            </a-animation>    
+                            <a-entity id="camera" camera lock-controls>
+                                <a-entity cursor="fuse: false; fuseTimeout: 1000" position="0 0 -1"
+                                geometry="primitive: sphere; radius: 0.005"
+                                material="color: #000000; shader: flat; opacity: 0.5">
+                                <a-animation attribute="scale"
+                                                to="3 3 3"
+                                                dur="1000"
+                                                begin="cursor-fusing"
+                                                fill="backwards"
+                                                easing="linear">
+                                </a-animation>
+                                </a-entity>
+                            </a-entity>
+                        </a-entity>
+
+                        <!-- Your 3D Model 01 -->
+                        <a-entity gltf-model="#your-3Dmodel-01"></a-entity>
+                        <!-- <a-entity gltf-part="src: #your-3Dmodel-01; part: stones"></a-entity>  -->
+
+                        <!-- cloud1 -->
+                        <a-entity gltf-model="#cloud1">
+                            <a-animation attribute="position"
+                                            from="30 3 0"
+                                            to="-50 3 0"
+                                            repeat="indefinite"
+                                            dur="10000"
+                                            easing="linear">
+                            </a-animation>
+                        </a-entity>
+                        <!-- cloud2 -->
+                        <a-entity gltf-model="#cloud2">
+                            <a-animation attribute="position"
+                                            from="30 3 0"
+                                            to="-120 3 0"
+                                            repeat="indefinite"
+                                            dur="13000"
+                                            easing="linear">
+                            </a-animation>
+                        </a-entity>
+
+                        <!-- projects -->
+                        <a-entity project-link="num: 1" gltf-model="#elders-cube" scale="1 1 1"></a-entity>
+                        <a-entity project-link="num: 2" gltf-model="#books-cube"></a-entity>
+                        <a-entity project-link="num: 3" gltf-model="#luka-cube"></a-entity>
+                        <a-entity project-link="num: 4" gltf-model="#magical-cube"></a-entity>
+                        <a-entity project-link="num: 5" gltf-model="#recipes-cube"></a-entity>
+
+                        <!-- billboard -->
+                        <a-entity id="entire-billboard" about-box-cursor-listener scale="1 .75 1" position="20 3 0" rotation="0 0 0" >
+                                <a-entity triangle-centrelizer  id="tri_rot1" rotation= "0 0 0" >
+                                    <a-entity gltf-model="assets/triangles/tri1.gltf" rotation="0 -60 0" scale="1 1 1">
+                                    </a-entity>
+
+                                    <a-animation id="tri-animation" attribute="rotation" from="0 0 0" to="0 0 0"></a-animation>
+                                </a-entity>
+                                <a-entity triangle-centrelizer about-box-cursor-listener  id="tri_rot2" rotation= "0 0 0"  >
+                                        <a-entity gltf-model="assets/triangles/tri2.gltf" rotation="0 -60 0" scale="1 1 1"  >
+                                        </a-entity>
+
+                                    <a-animation id="tri-animation" attribute="rotation" from="0 0 0" to="0 0 0"></a-animation>
+                                </a-entity>
+                                <a-entity triangle-centrelizer about-box-cursor-listener  id="tri_rot3" rotation= "0 0 0"  >
+                                        <a-entity gltf-model="assets/triangles/tri3.gltf" rotation="0 -60 0" scale="1 1 1">
+                                        </a-entity>
+                                        <a-animation id="tri-animation" attribute="rotation" from="0 0 0" to="0 0 0"></a-animation>
+                                </a-entity>
+                                <a-entity triangle-centrelizer about-box-cursor-listener  id="tri_rot4" rotation= "0 0 0" >
+                                        <a-entity gltf-model="assets/triangles/tri4.gltf" rotation="0 -60 0" scale="1 1 1">
+                                        </a-entity>
+                                        <a-animation id="tri-animation" attribute="rotation" from="0 0 0" to="0 0 0"></a-animation>
+                                </a-entity>
+                                <a-entity triangle-centrelizer about-box-cursor-listener  id="tri_rot5" rotation= "0 0 0"  >
+                                        <a-entity gltf-model="assets/triangles/tri5.gltf" rotation="0 -60 0" scale="1 1 1">
+                                        </a-entity>
+                                        <a-animation id="tri-animation" attribute="rotation" from="0 0 0" to="0 0 0"></a-animation>
+                                </a-entity>
+                                <a-entity triangle-centrelizer about-box-cursor-listener  id="tri_rot6" rotation= "0 0 0" >
+                                        <a-entity gltf-model="assets/triangles/tri6.gltf" rotation="0 -60 0" scale="1 1 1">
+                                        </a-entity>
+                                        <a-animation id="tri-animation" attribute="rotation" from="0 0 0" to="0 0 0"></a-animation>
+                                </a-entity>
+                                <a-entity triangle-centrelizer about-box-cursor-listener  id="tri_rot7" rotation= "0 0 0">
+                                        <a-entity gltf-model="assets/triangles/tri7.gltf" rotation="0 -60 0" scale="1 1 1">  
+                                        </a-entity>
+                                        <a-animation id="tri-animation" attribute="rotation" from="0 0 0" to="0 0 0"></a-animation>
+                                </a-entity>
+                                <a-entity triangle-centrelizer about-box-cursor-listener  id="tri_rot8" rotation= "0 0 0">
+                                        <a-entity gltf-model="assets/triangles/tri8.gltf" rotation="0 -60 0" scale="1 1 1">
+                                        </a-entity>
+                                        <a-animation id="tri-animation" attribute="rotation" from="0 0 0" to="0 0 0"></a-animation>
+                                </a-entity>
+                                <a-entity triangle-centrelizer about-box-cursor-listener  id="tri_rot9" rotation= "0 0 0" >
+                                        <a-entity gltf-model="assets/triangles/tri9.gltf" rotation="0 -60 0" scale="1 1 1">
+                                        </a-entity>
+                                        <a-animation id="tri-animation" attribute="rotation" from="0 0 0" to="0 0 0"></a-animation>
+                                </a-entity>
+                                <a-entity triangle-centrelizer about-box-cursor-listener  id="tri_rot10"  rotation= "0 0 0" >
+                                        <a-entity gltf-model="assets/triangles/tri10.gltf" rotation="0 -60 0" scale="1 1 1">
+                                        </a-entity>
+                                        <a-animation id="tri-animation" startEvents="rotate-billboard," attribute="rotation" from="0 0 0" to="0 0 0"></a-animation>
+                                </a-entity>
+                        </a-entity>
+
+                         <!-- <a-entity id="bills" gltf-model="#billboard"></a-entity> -->
+
+                </a-scene> 
+            </div>
+        </div>
+    </body>
+</html>

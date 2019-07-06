@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="project.js"></script>
+    <title>?</title>
+</head>
+<body onload="loadPage()">
+    <!-- navbar -->
+    <div class="container-1">
+        <li><a class = "yellow" href="/" onclick="cameraLocation({x: 12, y:6, z:13}, {x: 1.8, y: 40, z: 0});">HOME</a></li>
+    </div>
+    <!-- title -->
+    <div class="title-wrapper">
+        <div class="title">
+            <h1 class="project-name">ELDER SHARE A SKILL</h1>
+        </div>
+    </div>
+
+    <div class="all-carousells">
+        <!-- elder -->
+        <div class="carousel active" data-flickity='{ "pageDots": false, "fullscreen": true, "lazyLoad": 1, "arrowShape": "M30.49,50a.31.31,0,0,1,.1-.24l41-41L62.93,0l-41,41a12.67,12.67,0,0,0,0,17.88l41,41,8.7-8.7-41-41A.31.31,0,0,1,30.49,50Z"}'>
+                <div class="carousel-cell">
+                    <img class="carousel-cell-image"
+                    data-flickity-lazyload="assets/cards/elders/1.png" />
+                </div>
+                <div class="carousel-cell">
+                    <img class="carousel-cell-image"
+                    data-flickity-lazyload= "assets/cards/elders/2.png" />
+                </div>
+                <div class="carousel-cell">
+                    <img class="carousel-cell-image"
+                    data-flickity-lazyload="assets/cards/elders/3.png" />
+                </div>
+                <div class="carousel-cell">
+                    <img class="carousel-cell-image"
+                    data-flickity-lazyload="assets/cards/elders/4.png" />
+                </div>
+            </div>
+
+            <!-- finals -->
+            <!-- <div class="carousel" data-flickity='{ "pageDots": false, "fullscreen": true, "lazyLoad": 1, "arrowShape": "M30.49,50a.31.31,0,0,1,.1-.24l41-41L62.93,0l-41,41a12.67,12.67,0,0,0,0,17.88l41,41,8.7-8.7-41-41A.31.31,0,0,1,30.49,50Z"}'>
+                <div class="carousel-cell">
+                    <img class="carousel-cell-image"
+                    data-flickity-lazyload="assets/cards/finals/1.png" />
+                </div>
+                <div class="carousel-cell">
+                    <img class="carousel-cell-image"
+                    data-flickity-lazyload= "assets/cards/finals/2.png" />
+                </div>
+                <div class="carousel-cell">
+                    <img class="carousel-cell-image"
+                    data-flickity-lazyload="assets/cards/finals/3.png" />
+                </div>
+                <div class="carousel-cell">
+                    <img class="carousel-cell-image"
+                    data-flickity-lazyload="assets/cards/finals/4.png" />
+                </div>
+            </div> -->
+
+            <!-- finals-copy -->
+            <!-- <div class="carousel " data-flickity='{ "pageDots": false, "fullscreen": true, "lazyLoad": 1,"arrowShape": "M30.49,50a.31.31,0,0,1,.1-.24l41-41L62.93,0l-41,41a12.67,12.67,0,0,0,0,17.88l41,41,8.7-8.7-41-41A.31.31,0,0,1,30.49,50Z" }'>
+                    <div class="carousel-cell">
+                        <img class="carousel-cell-image"
+                        data-flickity-lazyload="assets/cards/finals/1.png" />
+                    </div>
+            </div> -->
+              <!-- finals-copy -->
+              <!-- <div class="carousel " data-flickity='{ "pageDots": false, "fullscreen": true, "lazyLoad": 1,"arrowShape": "M30.49,50a.31.31,0,0,1,.1-.24l41-41L62.93,0l-41,41a12.67,12.67,0,0,0,0,17.88l41,41,8.7-8.7-41-41A.31.31,0,0,1,30.49,50Z" }'>
+                    <div class="carousel-cell">
+                        <img class="carousel-cell-image"
+                        data-flickity-lazyload="assets/cards/finals/1.png" />
+                    </div>
+            </div> -->
+                <!-- finals-copy -->
+            <!-- <div class="carousel " data-flickity='{ "pageDots": false, "fullscreen": true, "lazyLoad": 1,"arrowShape": "M30.49,50a.31.31,0,0,1,.1-.24l41-41L62.93,0l-41,41a12.67,12.67,0,0,0,0,17.88l41,41,8.7-8.7-41-41A.31.31,0,0,1,30.49,50Z" }'>
+                        <div class="carousel-cell">
+                            <img class="carousel-cell-image"
+                            data-flickity-lazyload="assets/cards/finals/1.png" />
+                        </div>
+                </div> -->
+    </div>
+
+          
+
+    <!-- description -->
+    <div class="description">
+        <p class="description-p">
+            <!-- Our site pairs retirees who have valuable skills to share, with young students who'd like to build a meaningful relationship with their teacher.
+             allows for a unique app they teach. -->
+        </p>
+    </div>
+    <div class="btm-wrapper">
+            <div class="bottom">
+                <div class="tech-link">
+                    <p class="made-with">CSS / HTML / JS / RUBY ON RAILS / FIGMA</p>
+                    <a class="web-link" href="#">VISIT ELDER SHARE A SKILL</a>
+                </div>
+                <div class="next-project">
+                    <img  src="assets/icons/blue_arrow.png" alt="" onclick="swapProject(currentIndex - 1)">
+                    <p class="project-num">1 / 5</p>
+                    <img class="arrow-right" src="assets/icons/blue_arrow.png" alt="" onclick="swapProject(currentIndex + 1)">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
