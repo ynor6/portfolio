@@ -10,6 +10,11 @@ const webLinks = ["VISIT ELDER SHARE A SKILL", "Watch the book trailers", "Visit
 const projectHrefs = ["http://www.esas.xyz/", "https://vimeo.com/175067262", "https://www.studioluka.net", "https://whispering-shelf-75611.herokuapp.com/", ""]
 let currentIndex = 0;
 
+document.addEventListener('DOMContentLoaded', () => {
+    let index = getProjectIndexFromLocation();
+    swapProject(index - 1);
+});
+
 const getProjectIndexFromLocation = () => {
     let hash = window.location.hash;
     let number =  hash.substring(1);
@@ -19,10 +24,6 @@ const getProjectIndexFromLocation = () => {
     return 1;
 }
 
-const loadPage = () => {
-    let index = getProjectIndexFromLocation();
-    swapProject(index - 1);
-};
 
 // const getChildIndex = (child) => {
 //     let parent = child.parentNode;
