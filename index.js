@@ -1,4 +1,14 @@
-  // Component to change to a sequential color on click.
+document.addEventListener('DOMContentLoaded', function() {
+    // setup callback to remove 'loading' div when the scene fully loads
+    var scene = document.querySelector('a-scene');
+    var splash = document.querySelector('#splash');
+        scene.addEventListener('loaded', function (e) {
+            splash.style.display = 'none';
+        });
+    });
+
+
+// Component to change to a sequential color on click.
   AFRAME.registerComponent('about-box-cursor-listener', {
       init: function () {
           var increment = 120;
@@ -14,17 +24,6 @@
     });
 }
 });
-
-const showContact = () => {
-    const contact = document.querySelector(".contacts");
-    if(contact.style.display !== "block") {
-        contact.style.display = "block";
-    }
-    else {
-        contact.style.display = "none";
-    }
-
-}
 
 AFRAME.registerComponent('project-link', {
    schema: {
@@ -58,6 +57,17 @@ AFRAME.registerComponent('raycaster-autorefresh', {
         });
     }
 });
+
+const showContact = () => {
+    const contact = document.querySelector(".contacts");
+    if(contact.style.display !== "block") {
+        contact.style.display = "block";
+    }
+    else {
+        contact.style.display = "none";
+    }
+
+}
 
 const initUpdateNavbarOnScroll = () => {
     const navbar = document.querySelector('.container-1');

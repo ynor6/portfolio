@@ -5,8 +5,9 @@ const descriptions = ["A social platform made to connect skilled pensioners to y
     "My final project for the Shenkar College of Engineering and Design, Featuring 4 animated trailers for some of my favorite books from the “Other Proza” series.",
     "A collection of designs made during my time in Luka Environmental Graphic Design Studio, where I was in charge for the designs for multiple projects, and the studios video art content.",
     "An experimental AirBnB like service. The service allows ‘rental’ of supernatural creatures. Browse available creatures, look at their skills and rent the one that suits you most, if it’s currently available", "A web-app that lets you search a variety of cooking sites for recipes from any cuisine, save your favorite ones, then cook them while the app adjusts the quantities to the number of servings needed"];
-const createdWith = ["CSS / HTML / JS / RUBY ON RAILS/ FIGMA",  "After effects / Photoshop / Illustrator", "After effects / photoshop / illustrator / indesign", "ruby on rails / js / css / html / figma", "JS / bubble / npm"];
-const webLinks = ["VISIT ELDER SHARE A SKILL", "Watch the book trailers", "Visit studio Luka", "Visit magical creatures", "Visit recipes index"];
+const createdWith = ["CSS / HTML / JS / RUBY ON RAILS / FIGMA",  "After effects / Photoshop / Illustrator", "After effects / photoshop / illustrator / indesign", "ruby on rails / js / css / html / figma", "JS / CSS / HTML / Figma"];
+const webLinks = ["VISIT ELDER SHARE A SKILL", "Watch the book trailers", "Visit studio Luka", "Visit magical creatures", ""];
+const projectHrefs = ["http://www.esas.xyz/", "https://vimeo.com/175067262", "https://www.studioluka.net", "https://whispering-shelf-75611.herokuapp.com/", ""]
 let currentIndex = 0;
 
 const getProjectIndexFromLocation = () => {
@@ -78,6 +79,7 @@ const swapTexts = (newIndex) => {
     description.innerHTML = descriptions[newIndex];
     madeWith.innerHTML = createdWith[newIndex];
     webLink.innerHTML = webLinks[newIndex];
+    webLink.href = projectHrefs[newIndex];
     projectNum.innerHTML = `${newIndex+1} / 5`
 }
 

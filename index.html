@@ -29,10 +29,8 @@
                 </div>
             </div>
 
-            <!--  A - Frame -->
-            
-            <div id="my-scene">
-                <a-scene raycaster-autorefresh renderer="gammaOutput: true" embedded> 
+           <div id="my-scene">
+                <a-scene loading-screen="dotsColor: red; backgroundColor: black" raycaster-autorefresh renderer="gammaOutput: true" embedded> 
                     <!-- Asset Management System -->
                     <!-- Download and move your 3D models to the ASSETs folder -->
                     
@@ -57,7 +55,7 @@
 
                         <!-- Camera -->
                         
-                        <a-entity id="cameraRig"  wasd-controls look-controls position="11 6 13" rotation="1.8 40 0">
+                        <a-entity id="cameraRig" wasd-controls look-controls position="11 6 13" rotation="1.8 40 0">
                             <a-animation attribute="rotation" 
                                 dur="1050" 
                                 easing="linear"
@@ -125,7 +123,7 @@
 
                         <!-- billboard -->
                         <a-entity id="entire-billboard" about-box-cursor-listener scale="1 .75 1" position="20 3 0" rotation="0 0 0" >
-                                <a-entity triangle-centrelizer  id="tri_rot1" rotation= "0 0 0" >
+                                <a-entity triangle-centrelizer id="tri_rot1" rotation= "0 0 0" >
                                     <a-entity gltf-model="assets/triangles/tri1.gltf" rotation="0 -60 0" scale="1 1 1">
                                     </a-entity>
 
@@ -182,6 +180,11 @@
                          <!-- <a-entity id="bills" gltf-model="#billboard"></a-entity> -->
 
                 </a-scene> 
+
+            <div id="splash">
+              <div class="loading"></div>
+            </div>
+
             </div>
         </div>
     </body>
