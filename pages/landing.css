@@ -98,11 +98,11 @@ li a {
   }
 }
 
-.loading {
+ .loading {
   width: 24px;
   height: 24px;
   border-radius: 50%;
   border: 0.25rem solid rgba(75, 75, 75, 0.2);
   border-top-color: white;
   animation: spin 1s infinite linear;
-}
+} 
