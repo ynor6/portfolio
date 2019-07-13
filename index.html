@@ -11,6 +11,7 @@
         <script src="https://unpkg.com/aframe-gltf-part-component/dist/aframe-gltf-part-component.min.js"></script>
         <!-- A-FRAME template -->
         <script src="https://unpkg.com/aframe-template-component@3.2.1/dist/aframe-template-component.min.js"></script>
+        <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script> 
 
         <script src="index.js"></script>
     </head>
@@ -76,15 +77,11 @@
                             </a-animation>    
                             <a-entity id="camera" camera lock-controls>
                                 <a-entity cursor="fuse: false; fuseTimeout: 1000" position="0 0 -1"
-                                geometry="primitive: sphere; radius: 0.005"
-                                material="color: #000000; shader: flat; opacity: 0.5">
-                                <a-animation attribute="scale"
-                                                to="3 3 3"
-                                                dur="1000"
-                                                begin="cursor-fusing"
-                                                fill="backwards"
-                                                easing="linear">
-                                </a-animation>
+                                geometry="primitive: sphere; radius: 0.009"
+                                material="color: #000000; shader: flat; opacity: 0.5"
+                                animation__scale="property: scale; dir: alternate; dur: 1000;
+                                easing: easeInSine; loop: true; to: 2 2 2">
+                                
                                 </a-entity>
                             </a-entity>
                         </a-entity>
